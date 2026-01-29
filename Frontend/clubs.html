@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Clubs | College Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3b82f6',
+                        dark: '#0f172a',
+                        card: '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; }
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-500 selection:text-white">
+
+    <nav class="fixed w-full z-50 top-0 start-0 border-b border-slate-800 bg-slate-950/90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <div class="bg-gradient-to-br from-blue-500 to-cyan-400 text-white w-10 h-10 rounded-lg flex items-center justify-center font-bold text-xl shadow-lg">C</div>
+                <span class="self-center text-2xl font-bold whitespace-nowrap text-white tracking-tight">College Portal</span>
+            </a>
+            <div class="flex md:order-2 space-x-3 gap-4">
+                <a href="login.html" class="text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 font-medium rounded-lg text-sm px-4 py-2 text-center transition-all">Login</a>
+                <a href="signup.html" class="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-4 py-2 text-center shadow-lg shadow-blue-500/30 transition-all">Sign Up</a>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
+                    <li><a href="index.html" class="block py-2 px-3 text-slate-300 hover:text-blue-400 md:p-0 transition-colors">Home</a></li>
+                    <li><a href="events.html" class="block py-2 px-3 text-slate-300 hover:text-blue-400 md:p-0 transition-colors">Events</a></li>
+                    <li><a href="clubs.html" class="block py-2 px-3 text-blue-400 md:p-0" aria-current="page">Clubs</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-12 text-center px-4 bg-slate-900">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 fade-in">All Student Clubs</h1>
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-8 fade-in">
+            Join any of our vibrant student clubs and enhance your college experience
+        </p>
+        <a href="index.html" class="inline-flex items-center px-6 py-2 border border-slate-700 rounded-full text-slate-300 hover:bg-slate-800 hover:text-white transition-all fade-in">
+            <i class="fa-solid fa-arrow-left mr-2"></i> Back to Home
+        </a>
+    </section>
+
+    <section class="py-8 pb-24 px-4 bg-slate-900">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all hover:shadow-xl hover:-translate-y-1 group">
+                <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-white text-xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Vertex</h3>
+                <p class="text-slate-400 text-sm mb-4 leading-relaxed h-16 overflow-hidden">
+                    Technical club focused on competitive programming and development. Join us to enhance your coding skills and participate in hackathons.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700 text-cyan-400">Tech</span>
+                    <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700 text-cyan-400">Programming</span>
+                </div>
+                <div class="flex items-center text-slate-400 text-sm mb-2">
+                    <i class="fa-solid fa-user-group w-6 text-center mr-2"></i> 150+ members
+                </div>
+                <div class="flex items-center text-slate-400 text-sm mb-6">
+                    <i class="fa-regular fa-calendar w-6 text-center mr-2"></i> Wednesdays 4 PM
+                </div>
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl transition-colors shadow-lg shadow-blue-500/20">
+                    Join Club
+                </button>
+            </div>
+
+            <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all hover:shadow-xl hover:-translate-y-1 group">
+                <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-white text-xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">GDG</h3>
+                <p class="text-slate-400 text-sm mb-4 leading-relaxed h-16 overflow-hidden">
+                    Google Developer Group - Learn latest Google technologies and cloud computing. Build real-world projects with mentorship.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700 text-cyan-400">Tech</span>
+                    <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700 text-cyan-400">Development</span>
+                </div>
+                <div class="flex items-center text-slate-400 text-sm mb-2">
+                    <i class="fa-solid fa-user-group w-6 text-center mr-2"></i> 200+ members
+                </div>
+                <div class="flex items-center text-slate-400 text-sm mb-6">
+                    <i class="fa-regular fa-calendar w-6 text-center mr-2"></i> Fridays 3 PM
+                </div>
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl transition-colors shadow-lg shadow-blue-500/20">
+                    Join Club
+                </button>
+            </div>
+
+            <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all hover:shadow-xl hover:-translate-y-1 group">
+                <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-white text-xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">MAC</h3>
+                <p class="text-slate-400 text-sm mb-4 leading-relaxed h-16 overflow-hidden">
+                    Media & Arts Club - Express your creativity through various art forms including digital art, painting, and multimedia.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700 text-cyan-400">Arts</span>
+                    <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700 text-cyan-400">Creative</span>
+                </div>
+                <div class="flex items-center text-slate-400 text-sm mb-2">
+                    <i class="fa-solid fa-user-group w-6 text-center mr-2"></i> 100+ members
+                </div>
+                <div class="flex items-center text-slate-400 text-sm mb-6">
+                    <i class="fa-regular fa-calendar w-6 text-center mr-2"></i> Thursdays 5 PM
+                </div>
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl transition-colors shadow-lg shadow-blue-500/20">
+                    Join Club
+                </button>
+            </div>
+
+            <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all hover:shadow-xl hover:-translate-y-1 group">
+                <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-white text-xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-camera"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Shutterbugs</h3>
+                <p class="text-slate-400 text-sm mb-4 leading-relaxed h-16 overflow-hidden">
+                    Photography club capturing campus moments and teaching photography techniques. Weekly photo walks and exhibitions.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700 text-cyan-400">Photography</span>
+                    <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700 text-cyan-400">Arts</span>
+                </div>
+                <div class="flex items-center text-slate-400 text-sm mb-2">
+                    <i class="fa-solid fa-user-group w-6 text-center mr-2"></i> 80+ members
+                </div>
+                <div class="flex items-center text-slate-400 text-sm mb-6">
+                    <i class="fa-regular fa-calendar w-6 text-center mr-2"></i> Saturdays 2 PM
+                </div>
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl transition-colors shadow-lg shadow-blue-500/20">
+                    Join Club
+                </button>
+            </div>
+
+            <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all hover:shadow-xl hover:-translate-y-1 group">
+                <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-white text-xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-users-rays"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">GirlScript</h3>
+                <p class="text-slate-400 text-sm mb-4 leading-relaxed h-16 overflow-hidden">
+                    Empowering women in technology and open source. Participate in coding workshops and community projects.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700 text-cyan-400">Tech</span>
+                    <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700 text-cyan-400">Community</span>
+                </div>
+                <div class="flex items-center text-slate-400 text-sm mb-2">
+                    <i class="fa-solid fa-user-group w-6 text-center mr-2"></i> 120+ members
+                </div>
+                <div class="flex items-center text-slate-400 text-sm mb-6">
+                    <i class="fa-regular fa-calendar w-6 text-center mr-2"></i> Tuesdays 4 PM
+                </div>
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl transition-colors shadow-lg shadow-blue-500/20">
+                    Join Club
+                </button>
+            </div>
+
+            <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all hover:shadow-xl hover:-translate-y-1 group">
+                <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-white text-xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-terminal"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">CodeArena</h3>
+                <p class="text-slate-400 text-sm mb-4 leading-relaxed h-16 overflow-hidden">
+                    Competitive programming and hackathon preparation. Practice problems and participate in national competitions.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700 text-cyan-400">Tech</span>
+                    <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700 text-cyan-400">Competitive</span>
+                </div>
+                <div class="flex items-center text-slate-400 text-sm mb-2">
+                    <i class="fa-solid fa-user-group w-6 text-center mr-2"></i> 180+ members
+                </div>
+                <div class="flex items-center text-slate-400 text-sm mb-6">
+                    <i class="fa-regular fa-calendar w-6 text-center mr-2"></i> Daily sessions
+                </div>
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl transition-colors shadow-lg shadow-blue-500/20">
+                    Join Club
+                </button>
+            </div>
+
+            <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all hover:shadow-xl hover:-translate-y-1 group">
+                <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-white text-xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-language"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Foreign Language Club</h3>
+                <p class="text-slate-400 text-sm mb-4 leading-relaxed h-16 overflow-hidden">
+                    Learn and practice new languages with peers. Currently offering French, Spanish, Japanese, and German classes.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700 text-cyan-400">Languages</span>
+                    <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700 text-cyan-400">Culture</span>
+                </div>
+                <div class="flex items-center text-slate-400 text-sm mb-2">
+                    <i class="fa-solid fa-user-group w-6 text-center mr-2"></i> 90+ members
+                </div>
+                <div class="flex items-center text-slate-400 text-sm mb-6">
+                    <i class="fa-regular fa-calendar w-6 text-center mr-2"></i> Mon & Wed 6 PM
+                </div>
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl transition-colors shadow-lg shadow-blue-500/20">
+                    Join Club
+                </button>
+            </div>
+
+            <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all hover:shadow-xl hover:-translate-y-1 group">
+                <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-white text-xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-dumbbell"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Sports Club</h3>
+                <p class="text-slate-400 text-sm mb-4 leading-relaxed h-16 overflow-hidden">
+                    Stay fit and participate in inter-college tournaments. Multiple sports including cricket, basketball, football, and more.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700 text-cyan-400">Sports</span>
+                    <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700 text-cyan-400">Fitness</span>
+                </div>
+                <div class="flex items-center text-slate-400 text-sm mb-2">
+                    <i class="fa-solid fa-user-group w-6 text-center mr-2"></i> 250+ members
+                </div>
+                <div class="flex items-center text-slate-400 text-sm mb-6">
+                    <i class="fa-regular fa-calendar w-6 text-center mr-2"></i> Daily 5-7 PM
+                </div>
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl transition-colors shadow-lg shadow-blue-500/20">
+                    Join Club
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#" class="flex items-center space-x-2 mb-4">
+                        <div class="bg-blue-500 text-white w-8 h-8 rounded flex items-center justify-center font-bold">C</div>
+                        <span class="text-xl font-bold text-white">College Portal</span>
+                    </a>
+                    <p class="text-slate-500 text-sm mb-4">Your gateway to academic excellence and campus life.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Academics</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Admissions</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Campus Life</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-start"><i class="fa-solid fa-location-dot mt-1 mr-2 text-blue-500"></i> MIT Academy Of Engineering, Alandi Pune 412105</li>
+                        <li class="flex items-center"><i class="fa-solid fa-phone mr-2 text-blue-500"></i> +1 (555) 123-4567</li>
+                        <li class="flex items-center"><i class="fa-solid fa-envelope mr-2 text-blue-500"></i> mitaoe.ac.in@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center">
+                <p class="text-slate-600 text-sm">© 2026 College Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
